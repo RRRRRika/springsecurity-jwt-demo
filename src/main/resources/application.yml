@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo1
+  datasource:
+    url: jdbc:mysql://xxx.xxx.xxx.xxx:3306/xxx?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+    username: test
+    password: test-password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # hikariCP
+    hikari:
+      auto-commit: false
+      connection-timeout: 3000
+      validation-timeout: 3000
+      max-lifetime: 60000
+      maximum-pool-size: 20
+      minimum-idle: 1
+  data:
+    redis:
+      host: xxx.xxx.xxx.xxx
+      port: 6379
+      password: xxxxx
+      database: 0
+      # lettuce client
+      lettuce:
+        pool:
+          max-idle: 8
+          max-active: 16
+
+Jwt:
+  token:
+    secret-key: OhzBHCxTZ7heQvxrNuJ1IGJOD2fzj5ra
+    expiration: 180000
