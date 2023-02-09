@@ -17,7 +17,7 @@ springboot 3.0 + springsecurity 6.0 + mysql + redis
 
 *****
 ### 关于认证流程
-实际上就这么些步骤 ~~摸了好久, 我是菜鸡（虽然初次接触~~ ：
+实际上就这么些步骤 ~~摸了好久, 我是菜鸡~~ ：
 - Filter 将 username 和 password 封装在 Authentication 中传给 AuthenticationManagement
 - Management 调用 AuthenticationProvider(s) 验证
 - provider 从 UserDetailsService 获得 UserDetails, 并用 PasswordEncoder 验证
